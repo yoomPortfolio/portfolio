@@ -1,0 +1,207 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul{list-style: none;}
+a{text-decoration: none; color: #000;}
+
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+@font-face {
+    font-family: 'MaruBuri-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::selection {
+    background-color: #7953a2;
+    color: #fff;
+}
+
+
+
+/* nav */
+nav{
+    float: right;
+    margin-top: 80px;
+    position: fixed;
+    z-index: 2;
+    width: 600px;
+    height: 70px;
+    right: 200px;
+    /* display: none; */
+}
+
+nav ul{
+    /* max-width: 1600px;
+    margin: 0 auto;
+    height: 100%; */
+    overflow: hidden;
+    /* float: right; */
+    width: 100%;
+}
+
+nav ul li{
+    float: left;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    width: 20%;
+    line-height: 70px;
+}
+
+nav ul li a{
+    display: inline-block;
+    color: #000;
+    width: 100%;
+    font-family: 'S-CoreDream-3Light';
+    font-size: 22px;
+}
+
+
+nav ul li::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: #7953a2;
+    bottom: 20px; right: 0;
+    transition: 0.8s;
+    z-index: -1;
+}
+
+nav ul li:hover::after,
+nav ul li.on::after{
+    width: 70px;
+}
+
+/* nav */
+
+/* 섹션에서 인디케이터 */
+#fp-nav ul li a span{
+    background-color: #fff;
+    font-family: 'Playfair Display';
+}
+
+#fp-nav ul li .fp-tooltip{
+    padding: 5px 20px;
+    color: #7953a2;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    font-family: 'Playfair Display';
+}
+
+#fp-nav ul li .fp-tooltip.on{
+    width: auto;
+    opacity: 1;
+}
+
+/* works 시작 */
+.works{
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/bg_works\(2\).png) no-repeat center;
+    background-size: cover;
+}
+
+.wrap{
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.wrap > p{
+    /* float: l; */
+    font-family: 'Playfair Display';
+    font-size: 130px;
+    color: #fff;
+    width: 500px;
+    text-align: center;
+    height: 30px;
+    position: absolute;
+    left: 120px;
+    /* opacity: 0; */
+    transition: 0.8s;
+    top: 1.9vh;
+    letter-spacing: -7px;
+}
+
+
+.left{
+    width: 750px;
+    height: 700px;
+    float: left;
+}
+
+.left .pc{
+    position: absolute;
+    top: -2%;
+    left: -5%;
+}
+
+.left .pc img{
+    width: 100%;
+}
+
+.left .pc::after{
+    content: '';
+    position: absolute;
+    width: 450px;
+    height: 245px;
+    background: url(../images/sidmool.png)center top no-repeat;
+    top: 137px;
+    left: 177px;
+    background-size: cover;
+    transition: 7s linear;
+}
+
+.pc:hover::after{
+    
+    background-position: center bottom;
+}
+
+.right{
+    float: right;
+    width: 470px;
+    height: 370px;
+    left: 20%;
+}
+
+.right .info{
+    font-family: 'S-CoreDream-3Light';
+    line-height: 30px;
+    color: #563a80;
+}
+
+.right .info h3{
+    font-family: 'S-CoreDream-4Regular';
+    margin-bottom: 1vw;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.right .info ul li{
+    float: left;
+}
+
+
+/* works 끝 */
